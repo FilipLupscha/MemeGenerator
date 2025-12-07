@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Meme Generator</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body>
+    <h1>Meme Generator</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
+        {% endif %}
+    {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <input type="text" name="top_text" placeholder="Zgornji tekst" maxlength="50">
+        <input type="text" name="bottom_text" placeholder="Spodnji tekst" maxlength="50">
+        <button type="submit">Generiraj Meme!</button>
+    </form>
+</body>
+</html>

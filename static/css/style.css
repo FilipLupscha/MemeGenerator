@@ -1,0 +1,3 @@
+body { font-family: Arial; max-width: 600px; margin: 50px auto; text-align: center; }
+input, button { display: block; margin: 10px auto; padding: 10px; width: 80%; }
+button { background: #ff6b35; color: white; border: none; cursor: pointer; }
